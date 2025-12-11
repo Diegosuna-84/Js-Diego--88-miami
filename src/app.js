@@ -24,20 +24,23 @@ window.onload = function () {
   ];
   const excuseLine = document.querySelector("#excuse");
   const picture = document.querySelector("#pictures");
+  const element = document.getElementById('myElementId')
   // const footer = document.querySelector(#footer)
+  if (element) {
+    element.style.width = '18rem';
+}
 
   function getrandomindex(array) {
     const randomindex = Math.floor(Math.random() * array.length);
     return randomindex;
   }
-  
+
   let whoindex = getrandomindex(who);
   let actionindex = getrandomindex(action);
   let whatindex = getrandomindex(what);
   let whenindex = getrandomindex(when);
 
   excuseLine.innerHTML = `${who[whoindex]} ${action[actionindex]} ${what[whatindex]} ${when[whenindex]}`;
-  
 
   picture.src = pictures[getrandomindex(pictures)];
   console.log(`${what} ${who} ${when} ${action}`);
