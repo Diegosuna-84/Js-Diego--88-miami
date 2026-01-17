@@ -6,9 +6,9 @@ import "./assets/img/4geeks.ico";
 
 window.onload = function () {
   //write your code here
-  let who = ["The dog", "My grandma", "The mailman", "My bird"];
-  let action = ["ate", "peed", "crushed", "broke"];
-  let what = ["my homework", "my phone", "the car"];
+  let nouns = ["The dog", "My grandma", "The mailman", "My bird"];
+  let actions = ["ate", "peed", "crushed", "broke"];
+  let whats = ["my homework", "my phone", "the car"];
   let when = [
     "before the class",
     "when I was sleeping",
@@ -28,20 +28,20 @@ window.onload = function () {
   // const footer = document.querySelector(#footer)
   
 
-  function getrandomindex(array) {
+  function getRandomIndex(array) {
     const randomindex = Math.floor(Math.random() * array.length);
     return randomindex;
   }
 
-  let whoindex = getrandomindex(who);
-  let actionindex = getrandomindex(action);
-  let whatindex = getrandomindex(what);
-  let whenindex = getrandomindex(when);
+  let nounsIndex = getRandomIndex(nouns);
+  let actionsIndex = getRandomIndex(actions);
+  let whatsIndex = getRandomIndex(whats);
+  let whenIndex = getRandomIndex(when);
 
-  excuseLine.innerHTML = `${who[whoindex]} ${action[actionindex]} ${what[whatindex]} ${when[whenindex]}`;
+  excuseLine.innerHTML = `${nouns[nounsIndex]} ${actions[actionsIndex]} ${whats[whatsIndex]} ${when[whenIndex]}`;
 
-  picture.src = pictures[getrandomindex(pictures)];
-  console.log(`${what} ${who} ${when} ${action}`);
+  picture.src = pictures[getRandomIndex(pictures)];
+  console.log(`${whats} ${nouns} ${when} ${actions}`);
   // console.log(footer.classname)
   if (picture) {
     picture.style.width = '18rem';
